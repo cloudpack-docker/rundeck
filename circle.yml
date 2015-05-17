@@ -3,7 +3,7 @@ machine:
         - docker
 dependencies:
     override:
-        - docker build -t cloudpack/sshd .
+        - docker build -t cloudpack/rundeck .
 test:
     override:
-        - docker run -d -p 10022:22 cloudpack/sshd
+        - docker run -d -p 14440:4440 cloudpack/rundeck
