@@ -2,7 +2,7 @@ FROM centos:centos7
 
 RUN rpm -Uvh http://repo.rundeck.org/latest.rpm
 RUN yum -y update
-RUN yum -y install java-1.8.0-openjdk rundeck
+RUN yum -y install java-1.8.0-openjdk rundeck openssh-clients
 RUN yum -y clean all
 
 RUN cd /var/lib/rundeck/libext && \
